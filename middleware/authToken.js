@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 
 async function authToken(req,res,next){
     try{
-        const token = req.cookies?.token || req.header
+        const token = req.cookies?.token || req.header.token
 
         console.log("token",token)
         if(!token){
